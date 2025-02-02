@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> 
+        <script src="../assets/js/util.js"></script>
+
+        <title>Lessons</title>
+    </head>
+    <body>
+
+        <img src="../assets/images/triangle.png" class="triangle-img"></div>
+
+        <div data-include="nav-bar"></div>
+
+        <div class="banner" style="background-image: url(../assets/images/lessons_banner.jpg);">
+            <div class="banner-title">
+                <h1 class="banner-text" style="padding-top: 10px; padding-bottom: 10px;"><b>LESSONS</b></h1>
+            </div>
+        </div>
+
+        <div class="col-box" style="padding-top: 50px;">
+            <h1 style="color: var(--lime);"><b>GROUP LESSONS</b></h1>
+        </div>
+
+        <div class="col-box">
+            <div class="icons">
+                <div class="col-box">
+                    <div class="icon" style="background-image: url('../assets/images/beginner_icon.jpg')">
+                        <a href="lesson-booking.html" onclick="onClickLesson(0)">
+                            <div class="icon-title">
+                                <p style="padding-left: 20px;">
+                                    <b>Beginner<br>(ages 6 and under)</b>
+                                    <img class="icon-arrow" src="../assets/images/arrow.png">
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <h1 style="color: white;">$150</h1>
+                </div>
+                
+                <div class="col-box">
+                    <div class="icon" style="background-image: url('../assets/images/intermediate_icon.png')">
+                        <a href="lesson-booking.html" onclick="onClickLesson(1)">
+                            <div class="icon-title">
+                                <p style="padding-left: 20px;">
+                                    <b>Intermediate<br>(ages 7-12)</b>
+                                    <img class="icon-arrow" src="../assets/images/arrow.png">
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <h1 style="color: white;">$200</h1>
+                </div>
+                
+                <div class="col-box">
+                    <div class="icon" style="background-image: url('../assets/images/advanced_icon.jpg')">
+                        <a href="lesson-booking.html" onclick="onClickLesson(2)">
+                            <div class="icon-title">
+                                <p style="padding-left: 20px;">
+                                    <b>Advanced<br>(ages 13 and over)</b>
+                                    <img class="icon-arrow" src="../assets/images/arrow.png">
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <h1 style="color: white;">$250</h1>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col-box">
+            <div style="color: white; width: 50%; text-align: center;">
+                We offer lessons to players of all ages and experience!  Players will be grouped with 
+                others of similar skill level in their age category. 
+                <br><b style="color: var(--lime);">Click on a category to book lessons!<br>&nbsp;</b>
+            </div>
+        </div>
+
+        <div class="col-box">
+            <h1 style="color: white"><b>SCHEDULE</b></h1>
+        </div>
+
+        <div class="col-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Beginner</th>
+                        <th>Intermediate</th>
+                        <th>Advanced</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>5-6pm</td>
+                        <td></td>
+                        <td>7-8pm</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td></td>
+                        <td>5-6pm</td>
+                        <td>7-8pm</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td></td>
+                        <td>7-8pm</td>
+                        <td>5-6pm</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>5-6pm</td>
+                        <td>7-8pm</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>6-7pm</td>
+                        <td>5-6pm</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>10-11am</td>
+                        <td>11am-12pm</td>
+                        <td>12-1pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>1-2pm</td>
+                        <td>2-3pm</td>
+                        <td>4-5pm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-box" style="padding-top: 50px;" id="private-lessons">
+            <h1 style="color: var(--lime);"><b>PRIVATE LESSONS</b></h1>
+        </div>
+
+        <div class="col-box">
+            <p style="color: white; width: 50%; text-align: center;">
+                Our coaches also offer 1-on-1 lessons for players! To book private lessons, please directly 
+                reach out to the coach you are interested in having private lessons with, and they will 
+                provide you with their pricing and availability. 
+                <a href="coaches.html" style="cursor: pointer; text-decoration: none;">
+                    <br><b style="color: var(--lime);"><u>You can find out about and contact our coaches here!</u></b>
+                </a>
+                <br><br><br><br>
+            </p>
+        </div>
+
+        <div data-include="footer"></div>
+
+        <script>
+            function onClickLesson(i) {
+                sessionStorage.setItem("choice", i);
+            }
+         </script>
+        
+    </body>
+</html>
