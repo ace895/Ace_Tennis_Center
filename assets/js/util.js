@@ -1,13 +1,7 @@
 $(function () {
     var includes = $('[data-include]');
     $.each(includes, function () {
-        const currentPage = window.location.pathname; //Get filename
-        if(currentPage.includes("index")) {
-            var file = 'components/' + $(this).data('include') + '.html';
-        }
-        else {
-            var file = '/components/' + $(this).data('include') + '.html';
-        }
+        var file = '/Ace_Tennis_Center/components/' + $(this).data('include') + '.html';
 
         $(this).load(file, function () {
             if (file.includes("nav-bar.html")) {
