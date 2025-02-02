@@ -12,20 +12,31 @@ $(function () {
     });
 });
 
+const pageToNavMap = {
+    "index": "home-nav",
+    "confirmation": "home-nav", 
+    "lessons": "lessons-nav",
+    "court-booking": "court-nav",
+    "location": "location-nav",
+    "coaches": "coaches-nav",
+    "contact": "contact-nav"
+};
+
 function underlineNavBar() {
     //Remove border from all buttons
     const buttons = document.querySelectorAll(".button-underline");
     buttons.forEach(btn => {
         btn.style.borderBottom = "none";
     });
-
-    var buttonName = sessionStorage.getItem("navButton");
-
+    
+    //Find current page
+    const currentPage = window.location.pathname.split("/").pop().split(".")[0];
+    const buttonName = pageToNavMap[currentPage];
+    
     //Add border to button
     var button = document.getElementById(buttonName);
     if (button) {
         button.style.borderBottom = "4px solid var(--lime)";
-
     }
 }
 
