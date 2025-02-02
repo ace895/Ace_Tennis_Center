@@ -1,7 +1,13 @@
 $(function () {
     var includes = $('[data-include]');
     $.each(includes, function () {
-        var file = '../components/' + $(this).data('include') + '.html';
+        const currentPage = window.location.pathname; //Get filename
+        if(currentPage.includes("index")) {
+            var file = 'components/' + $(this).data('include') + '.html';
+        }
+        else {
+            var file = '/components/' + $(this).data('include') + '.html';
+        }
 
         $(this).load(file, function () {
             if (file.includes("nav-bar.html")) {
@@ -31,7 +37,6 @@ function underlineNavBar() {
 
 function adjustNavMargin() {
     const currentPage = window.location.pathname.split("/").pop(); //Get filename
-    console.log(currentPage)
     if (["court-booking.html", "lesson-booking.html"].includes(currentPage)) {
         //Adjust margin if needed
         var buttons = document.getElementById("nav-buttons");

@@ -13,12 +13,6 @@ document.addEventListener("DOMContentLoaded", function(){
             "</b></span>. You will recieve an email with your booking information.<br><br>Thank you!";
             console.log(text)
         textBox.innerHTML = text;
-
-        //Change what page the back button goes to 
-        history.pushState(null, "", location.href);
-        window.onpopstate = function() {
-            window.location.href = "lessons.html";
-        };
     }
     else if (type == "court") {
         const months = ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
