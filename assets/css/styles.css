@@ -183,6 +183,12 @@ button:hover {
     padding: 0 10px 0 10px;
 }
 
+.icon-img3 {
+    height: max-content;
+    width: 30px;
+    padding: 0 10px 0 10px;
+}
+
 /*banner*/
 .banner {
     height: 500px;
