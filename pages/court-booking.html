@@ -54,7 +54,7 @@
             </p>
 
             <div style="width: 60%;">
-                <h1 style="text-align: left;"><b>MAKE A BOOKING</b></h1>
+                <h1 style="text-align: left; margin-left: 0; color: var(--lime)"><b>MAKE A BOOKING</b></h1>
                 <div class="row-box" style="align-items: start; justify-content: space-between; gap: 50px;">
                     <div>
                         <p style="text-align: left;"><b>1. Choose a Date & Time</b><br>&nbsp</p>
@@ -85,18 +85,24 @@
                         <p style="text-align: left;"><b>2. Enter your Information</b><br>&nbsp</p>
                         <div class="info-form">
                             <form>
-                                <div class="row-box" style="justify-content: space-between; margin-bottom: 10px;">
-                                    <div style="width: 45%;">
+                                <div class="row-box" style="justify-content: space-between; margin-bottom: 10px; gap: 10px">
+                                    <div style="flex: 1; min-width: 0;">
                                         <input type="text" style="padding-right: 0;" class="form-control" id="firstName" placeholder="First name" required>
                                     </div>
-                                    <div style="width: 45%;">
+                                    <div style="flex: 1; min-width: 0;">
                                         <input type="text" style="padding-right: 0;" class="form-control" id="lastName" placeholder="Last name" required>
                                     </div>
                                 </div>
                     
-                                <input type="tel" style="margin-bottom: 10px; padding-right: 0;" class="form-control" id="phoneNumber" placeholder="Phone number" required>
+                                <div class="input-group" style="margin-bottom: 10px">
+                                    <input type="tel" style="padding-right: 0;" class="form-control" id="phoneNumber" placeholder="Phone number" required>
+                                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                                </div>
                         
-                                <input type="email" style="padding-right: 0;" class="form-control" id="email" placeholder="Email" required>
+                                <div class="input-group">
+                                    <input type="email" style="padding-right: 0;" class="form-control" id="email" placeholder="Email" required>
+                                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                </div>
                                 
                             </form>
                         </div>
