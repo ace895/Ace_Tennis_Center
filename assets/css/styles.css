@@ -3,7 +3,6 @@
     --dark-navy: #16172d;
     --lime: #A9C43C;
     --dark-lime: #90a830;
-    --underline-width: 0%;
 }
 
 * {
@@ -34,6 +33,7 @@ p, button, a {
 a {
     text-decoration: none;
     cursor: pointer;
+    color: inherit;
 }
 
 table {
@@ -77,7 +77,7 @@ button:hover {
 .navy-button::after {
     content: ""; 
     display: block;
-    width: var(--underline-width); 
+    width: 0%; 
     height: 3px; 
     background-color: var(--lime);
     position: absolute;
@@ -157,14 +157,37 @@ button:hover {
 
 /*footer*/
 .footer {
-    margin-top: auto; /* Pushes footer to the bottom */
-    display: flex;
+    margin-top: auto; 
     background-color: var(--lime);
     width: 100%;
-    align-items: center;
-    font-size: 16pt;
-    padding: 0;
+    font-size: 12pt;
+    padding: 20px 0 20px 0;
+    display: flex;
 }
+
+.a-underline {
+    position: relative;
+    padding-top: 10px;
+}
+
+.a-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: black;
+    transition: width 0.3s ease-in-out; 
+}
+
+.a-underline:hover::after {
+    width: 100%; 
+}
+
+/*images*/
 
 .icon-img {
     height: 30px;
@@ -188,6 +211,18 @@ button:hover {
     height: max-content;
     width: 30px;
     padding: 0 10px 0 10px;
+}
+
+.icon-img4 {
+    width: 25px;
+    height: auto;
+    padding: 0 10px 0 10px;
+}
+
+.icon-img5 {
+    height: max-content;
+    width: 25px;
+    padding: 10px 10px 0 10px;
 }
 
 /*banner*/
@@ -297,6 +332,13 @@ button:hover {
     align-items: center;
 }
 
+.col-box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25%;
+}
+
 /*specific components*/
 #contact-box{
     margin-top: 60px;
@@ -385,4 +427,9 @@ button:hover {
     max-width: 100%;
     box-sizing: border-box;
     padding: 10px; 
+}
+
+.horizontal-line {
+    width: 90%;
+    border-bottom: 2px solid black;
 }
