@@ -157,7 +157,8 @@ button:hover {
 
 /*footer*/
 .footer {
-    margin-top: auto; 
+    margin-top: 40px; 
+    border-top-width: 10px;
     background-color: var(--lime);
     width: 100%;
     font-size: 12pt;
